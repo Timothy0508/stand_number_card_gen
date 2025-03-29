@@ -48,6 +48,12 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _decrementCounter() {
+    setState(() {
+      _counter--;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,6 +100,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       ElevatedButton(
                         onPressed: _incrementCounter,
                         child: const Text('Increment'),
+                      ),
+                      ElevatedButton(
+                        onPressed: _decrementCounter,
+                        child: const Text('Decrement'),
                       ),
                       ElevatedButton(
                         onPressed:
